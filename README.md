@@ -5,6 +5,21 @@
 If you start with contract data, know this:
 >>Contract Opportunities is a government-wide list of notices of proposed contract actions expected to exceed $25,000. Notices include solicitations, pre-solicitations, sole source justifications, awards and other notices related to the acquisition of supplies and services.
 
+## Using this project
+
+This project assumes that you have some libraries installed
+
+ - `tidyverse` is required
+ - `dlookr` is used for a quick snapshot of data
+ 
+### File Structure
+ 
+ - /data: directory will hold data locally
+ - /analysis: directory will hold analysis scripts
+ - /helpers: directory holds helper scripts
+ - /outputs: directory holds outputs
+
+
 ## Finished Product
 
 #### Visualization Dashboard or Model
