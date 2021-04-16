@@ -50,7 +50,7 @@ ggplot(df, aes(x=AwardYear, y=ZipArea, size=Award, fill=ZipArea, color=ZipArea))
   geom_point(alpha=0.4) +
   theme_minimal() +
   theme(legend.position = "none")
-#ggsave(paste0(discuss_dir,"AwardSize v Year and Zip.png"))
+#ggsave(paste0(discuss_dir,"AwardSize v Year and Zip.png"), width = 3, height = 2)
 
 
 
