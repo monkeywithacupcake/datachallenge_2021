@@ -14,10 +14,11 @@ This project assumes that you have some libraries installed
  
 ### File Structure
  
- - /data: directory will hold data locally
+ - /data: directory will hold data locally - dir should be empty on github unless we generate some local data or get some small data files that are easier to keep (do not commit large files here, .gitignore should prevent this)
  - /analysis: directory will hold analysis scripts
  - /helpers: directory holds helper scripts
- - /outputs: directory holds outputs
+ - /outputs: directory holds outputs 
+ - /discuss: directory for discussion of topics and ideas - most intermediate products should probably go here
 
 
 ## Finished Product
