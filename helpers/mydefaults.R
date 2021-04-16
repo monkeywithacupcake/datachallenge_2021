@@ -18,6 +18,7 @@ helpers_dir <- "helpers/"
 outputs_dir <- "outputs/"
 data_dir <- "data/"
 analysis_dir <- "analysis/"
+discuss_dir <- "discuss/"  # a place for intermediate plots/notes
 
 #--------------------------------------------
 # static vars
