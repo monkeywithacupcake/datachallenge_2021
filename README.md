@@ -1,6 +1,6 @@
 # Data Challenge Project
 
-THIS IS MY CRAXY MADMESS
+THIS IS MY CRAXY MADMESS. -- NOT RELL
 
 ## Public data from: [beta.sam](https://beta.sam.gov/data-services)
 
