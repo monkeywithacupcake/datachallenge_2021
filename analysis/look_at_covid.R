@@ -31,10 +31,15 @@ df20covid <- df20 %>%
 df20covid <- df20covid %>%
   mutate(awardee15 = substr(gsub("\x95 ","",toupper(Awardee)),1,15))
 
-df20covidawardeesum <- df20covid %>%
-  group_by(awardee15) %>%
-  summarise(n = n(), dollars = sum(`Award$`)) %>%
-  arrange(dollars, n) %>%
-  mutate(dollars_group = cut_interval(dollars, 10))
+df20covid %>%
+  group_by(awardee15, AwardNumber) %>%
+  summarise(n = n(), .groups="drop")
 
-df20covid %>% filter(awardee15 == "HAMILTON MEDICA") %>% select(NoticeId, Title, AwardNumber, AwardDate, `Award$`)
+df20covidawardeesum <- df20covid %>%
+  group_by(awardee15, AwardNumber) %>%
+  slice(which.max(PostedDate)) %>%
+  summarise(dollars = sum(`Award$`), .groups="drop") %>%
+  arrange(dollars) %>%
+  mutate(dollars_group = cut_interval(dollars, 5))
+
+#tmp <- df20covid %>% filter(awardee15 == "HAMILTON MEDICA") %>% select(NoticeId, Title, AwardNumber, AwardDate, `Award$`)
