@@ -10,6 +10,11 @@ source("helpers/read_archives.R")
 fname <- paste0("FY",2020,"_archived_opportunities.csv")
 df20 <- read_csv(paste0(data_dir, fname))
 
+# if you download the covid report from SAM, you can see this one.
+# commented out to prevent error
+#covidreport <- readxl::read_excel(paste0(data_dir, "SAM_IAE COVID-19 Report 2021-05-10.xlsx"),
+#                                  skip = 3, n_max=44) # skip and n_max based on view
+
 # experimentation with covid data
 
 df20 <- df20 %>% mutate(pd = lubridate::date(PostedDate),
